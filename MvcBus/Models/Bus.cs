@@ -19,5 +19,8 @@ namespace MvcBus.Models
 
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
+        [Display(Name = "Speed (kph)")]
+        [Column(TypeName = "decimal(18, 2)")]
+        public decimal Speed { get; set; }
     }
 }

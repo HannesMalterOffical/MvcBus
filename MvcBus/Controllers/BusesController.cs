@@ -84,7 +84,7 @@ namespace MvcBus.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Arrival,Seats,Price")] Bus bus)
+        public async Task<IActionResult> Create([Bind("Id,Title,Arrival,Seats,Price,Speed")] Bus bus)
         {
             if (ModelState.IsValid)
             {
@@ -116,7 +116,7 @@ namespace MvcBus.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Arrival,Seats,Price")] Bus bus)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Arrival,Seats,Price,Speed")] Bus bus)
         {
             if (id != bus.Id)
             {
