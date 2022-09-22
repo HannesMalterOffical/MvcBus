@@ -165,9 +165,9 @@ namespace MvcBus.Controllers
         }
 
         // POST: Buses/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> Delete(int id, bool notUsed)
         {
             var bus = await _context.Bus.FindAsync(id);
             _context.Bus.Remove(bus);
