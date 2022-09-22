@@ -20,9 +20,39 @@ namespace MvcBus.Controllers
         }
 
         // GET: Buses
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string busSeats, string searchString)
         {
-            return View(await _context.Bus.ToListAsync());
+            // Use LINQ to get list of genres.
+            IQueryable<string> seatQuery = from m in _context.Bus
+                                            orderby m.Seats
+                                            select m.Seats;
+
+            var buses = from m in _context.Bus
+                         select m;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                buses = buses.Where(s => s.Title.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(busSeats))
+            {
+                buses = buses.Where(x => x.Seats == busSeats);
+            }
+
+            var movieGenreVM = new BusSeatViewModel
+            {
+                Seats = new SelectList(await seatQuery.Distinct().ToListAsync()),
+                Buses = await buses.ToListAsync()
+            };
+
+            return View(movieGenreVM);
+        }
+
+        [HttpPost]
+        public string Index(string searchString, bool notUsed)
+        {
+            return "From [HttpPost]Index: filter on " + searchString;
         }
 
         // GET: Buses/Details/5
