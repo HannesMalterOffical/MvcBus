@@ -13,7 +13,7 @@ namespace MvcBus.Models
 
         [DataType(DataType.Date)]
         public DateTime Arrival { get; set; }
-        public string Genre { get; set; }
+        public string Seats { get; set; }
         public decimal Price { get; set; }
     }
 }
