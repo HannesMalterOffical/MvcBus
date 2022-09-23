@@ -15,7 +15,7 @@ namespace MvcBus.Models
         [Required]
         public string Title { get; set; }
 
-        [Display(Name = "Release Date")]
+        [Display(Name = "Scheduled Arrival")]
         [DataType(DataType.Date)]
         public DateTime Arrival { get; set; }
 

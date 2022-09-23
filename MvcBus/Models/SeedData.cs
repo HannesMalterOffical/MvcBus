@@ -27,7 +27,7 @@ namespace MvcBus.Models
                         Arrival = DateTime.Parse("2022-9-28"),
                         Seats = "80",
                         Speed = 40,
-                        Price = 10.99M
+                        Price = 10.00M
                     },
 
                     new Bus
@@ -36,7 +36,7 @@ namespace MvcBus.Models
                         Arrival = DateTime.Parse("2022-10-31"),
                         Seats = "49",
                         Speed= 55,
-                        Price = 1.99M
+                        Price = 1.00M
                     },
 
                     new Bus
@@ -45,7 +45,7 @@ namespace MvcBus.Models
                         Arrival = DateTime.Parse("2022-10-18"),
                         Seats = "76",
                         Speed = 60,
-                        Price = 1.99M
+                        Price = 1.00M
                     }
 
                 );
