@@ -11,7 +11,7 @@ namespace MvcBus.Models
     {
         public int Id { get; set; }
 
-        [Display(Name = "Name")]
+        [Display(Name = "Type")]
         [StringLength(60, MinimumLength = 3)]
         [Required]
         public string Type { get; set; }
