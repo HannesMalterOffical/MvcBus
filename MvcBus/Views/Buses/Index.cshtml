@@ -12,11 +12,14 @@
 </p>
 <form asp-controller="Buses" asp-action="Index" method="get">
     <p>
-        Seats: <select asp-for="BusSeats" asp-items="Model.Seats">
+
+        <label asp-for="SearchString" class="control-label"></label>
+        <select asp-for="BusSeats" asp-items="Model.Seats">
             <option value="">All</option>
         </select>
 
-        Title: <input type="text" asp-for="SearchString" />
+        <label asp-for="SearchString" class="control-label"></label>
+        <input type="text" asp-for="SearchString" />
         <input type="submit" value="Filter" />
     </p>
 </form>
