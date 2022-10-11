@@ -11,23 +11,27 @@ namespace MvcBus.Models
     {
         public int Id { get; set; }
 
+        [Display(Name = "Name")]
         [StringLength(60, MinimumLength = 3)]
         [Required]
-        public string Title { get; set; }
+        public string Type { get; set; }
 
         [Display(Name = "Scheduled Arrival")]
         [DataType(DataType.Date)]
         public DateTime Arrival { get; set; }
 
+        [Display(Name = "Price")]
         [Range(1, 160)]
         [DataType(DataType.Currency)]
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
 
+        [Display(Name = "Seats")]
         [Range(10, 100)]
         [Required]
         public string Seats { get; set; }
 
+        [Display(Name = "Speed km/h")]
         [Range(25, 100)]
         [Required]
         public decimal Speed { get; set; }

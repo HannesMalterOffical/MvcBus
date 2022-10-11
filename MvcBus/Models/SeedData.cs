@@ -23,7 +23,7 @@ namespace MvcBus.Models
                 context.Bus.AddRange(
                     new Bus
                     {
-                        Title = "Doubledecker bus",
+                        Type = "Doubledecker bus",
                         Arrival = DateTime.Parse("2022-9-28"),
                         Seats = "80",
                         Speed = 40,
@@ -32,7 +32,7 @@ namespace MvcBus.Models
 
                     new Bus
                     {
-                        Title = "Trolleybus",
+                        Type = "Trolleybus",
                         Arrival = DateTime.Parse("2022-10-31"),
                         Seats = "49",
                         Speed= 55,
@@ -41,7 +41,7 @@ namespace MvcBus.Models
 
                     new Bus
                     {
-                        Title = "Articulated Bus",
+                        Type = "Articulated Bus",
                         Arrival = DateTime.Parse("2022-10-18"),
                         Seats = "76",
                         Speed = 60,

@@ -38,7 +38,7 @@ namespace MvcBus.Migrations
                     b.Property<decimal>("Speed")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("Title")
+                    b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
